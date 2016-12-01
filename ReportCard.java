@@ -20,9 +20,6 @@ public class ReportCard {
     //Remarks
     private String mRemark;
 
-    //Create reportCard object of ArrayList type
-    private ArrayList<ReportCard> reportCard = new ArrayList<>();
-
     //Constant
     private static final String remark = "Good Conduct";
 
@@ -33,8 +30,7 @@ public class ReportCard {
     * @param grade
     * @param remark
      */
-    public ReportCard(String studentName, String subject, String grade, String remark)
-    {
+    public ReportCard(String studentName, String subject, String grade, String remark) {
         mStudentName = studentName;
         mSubject = subject;
         mGrade = grade;
@@ -54,18 +50,18 @@ public class ReportCard {
         return mGrade;
     }
 
-    public String getRemark() {
-        return mRemark;
-    }
+    public String getRemark() { return mRemark; }
 
     //Setters
-    public void setGrade(String studentName, String subject, String grade, String remark){
-        reportCard.add(new ReportCard(studentName,subject,grade,remark));
-    }
+    public void setStudentName(String studentName) { mStudentName = studentName; }
 
-    //Object toString conversion
-    public String getReportCard(){
-        return reportCard.toString();
-    }
+    public void setSubject(String subject) { mSubject = subject; }
 
+    public void setGrade(String grade) { mGrade = grade; }
+
+
+    //toString method
+    public String toString(){
+        return mStudentName +" "+ mSubject + " " + mGrade + " " + mRemark;
+    }
 }
